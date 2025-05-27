@@ -6,7 +6,8 @@ const cors = require('cors');
 const app = express();
 app.use(cors({
         origin: [
-            "https://streakmaintainer.vercel.app/",
+            "https://streakmaintainer.vercel.app",
+            "http://localhost:5173",
         ],
     }));
 app.use(express.json());
