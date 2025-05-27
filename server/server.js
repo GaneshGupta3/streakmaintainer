@@ -37,6 +37,10 @@ app.get('/api/streaks', async (req, res) => {
   }
 });
 
+app.get("/" , (req, res) => {
+  res.send("Welcome to the Streak Maintainer API!");
+});
+
 // Create new streak
 app.post('/api/streaks', async (req, res) => {
   try {
