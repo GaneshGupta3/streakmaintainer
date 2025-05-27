@@ -97,6 +97,9 @@ app.put("/api/streaks/:id/complete", async (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the Streak Maintainer API!");
+});
 // Delete streak
 app.delete("/api/streaks/:id", async (req, res) => {
     try {
