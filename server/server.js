@@ -1,6 +1,9 @@
 // server.js - Backend server
 const express = require("express");
 const mongoose = require("mongoose");
+require("dotenv").config();
+const MONGO_URI = process.env.MONGO_URI;
+
 const cors = require("cors");
 
 const app = express();
@@ -8,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect("mongodb://localhost:27017/streakapp", {
+mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
