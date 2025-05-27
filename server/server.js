@@ -8,11 +8,13 @@ const cors = require("cors");
 
 const app = express();
 app.use(
-  cors({
-    origin: ["http://localhost:5173", "https://your-frontend-domain.vercel.app"], // add both local and deployed frontend origins
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
+    cors({
+        origin: [
+            "https://streakmaintainer.vercel.app",
+            "http://localhost:5173"
+        ],
+        credentials: true,
+    })
 );
 
 app.use(express.json());
